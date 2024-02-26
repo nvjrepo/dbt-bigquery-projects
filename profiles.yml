@@ -1,0 +1,25 @@
+fts_dbt_bi:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('NVJ_BQ_DEV_PROJECT') }}"
+      dataset: "{{ env_var('NVJ_BQ_PROD_SCHEMA') }}"
+      threads: 8
+      timeout_second: 300
+      priority: interactive
+      location: "{{ env_var('NVJ_LOCATION') }}"
+      keyfile: "{{ env_var('NVJ_SA_ANALYTICS') }}"
+
+    
+    prod:
+      type: bigquery
+      method: service-account
+      project: "{{ env_var('NVJ_BQ_PROD_PROJECT') }}"
+      dataset: "{{ env_var('NVJ_BQ_PROD_SCHEMA') }}"
+      threads: 8
+      timeout_second: 300
+      priority: interactive
+      location: "{{ env_var('NVJ_LOCATION') }}"
+      keyfile: "{{ env_var('NVJ_SA_ANALYTICS') }}"
