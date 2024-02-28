@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dim_ga_users
+    description: user_information
+    columns:
+    - name: customer_id
+      description: unique id of visitor on the site
+      tests:
+        - unique
+        - not_null
+
+  - name: fct_ga_sessions
+    description: user_information
+    columns:
+    - name: customer_id
+      description: Unique identifier for the object.
+      tests:
+        - unique
+        - not_null
