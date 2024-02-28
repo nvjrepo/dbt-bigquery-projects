@@ -5,7 +5,7 @@ fts_dbt_bi:
       type: bigquery
       method: service-account
       project: "{{ env_var('NVJ_BQ_DEV_PROJECT') }}"
-      dataset: "{{ env_var('NVJ_BQ_PROD_SCHEMA') }}"
+      dataset: "{{ env_var('NVJ_BQ_DEV_SCHEMA') }}"
       threads: 8
       timeout_second: 300
       priority: interactive
