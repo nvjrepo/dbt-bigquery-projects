@@ -1,4 +1,4 @@
-fts_dbt_bi:
+dbt_bigquery_projects:
   target: dev
   outputs:
     dev:
