@@ -36,6 +36,6 @@ models:
     ga_projects:
       +tag: "ga_projects"
       staging:
-        +materialized: table
+        +materialized: "{{ 'incremental' if target.name == 'prod' else 'table' }}"
       marts:
-        +materialized: table        
+        +materialized: "{{ 'incremental' if target.name == 'prod' else 'table' }}"      

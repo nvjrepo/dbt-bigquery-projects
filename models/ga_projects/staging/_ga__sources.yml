@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: bq_data
+  - name: ga
     database:  bigquery-public-data
     dataset: google_analytics_sample
     tables:
