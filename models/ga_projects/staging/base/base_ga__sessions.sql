@@ -13,7 +13,7 @@
 
 select
     {{ dbt_utils.generate_surrogate_key(['fullvisitorid','visitstarttime']) }} as unique_id,
-    fullvisitorid as fullvisitor_id,
+    fullvisitorid as full_visitor_id,
     visitorid as visitor_id,
     visitid as visit_id,
     userid as user_id,

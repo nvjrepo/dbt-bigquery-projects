@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: dim_ga_users
+    description: user_information
+    columns:
+    - name: customer_id
+      description: Unique identifier for the object.
+      tests:
+        - unique
+        - not_null
