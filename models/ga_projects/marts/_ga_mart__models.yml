@@ -13,8 +13,13 @@ models:
   - name: fct_ga_sessions
     description: user_information
     columns:
-    - name: customer_id
+    - name: unique_id
       description: Unique identifier for the object.
       tests:
         - unique
         - not_null
+      columns:
+        - name: is_bounced
+          description: >
+              the columns is to show whether visit bounce from the session
+              This is important point for computing Active users
