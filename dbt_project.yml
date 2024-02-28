@@ -33,8 +33,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_bigquery_projects:
     # Config indicated by + and applies to all files under models/example/
-    ga4_projects:
+    ga_projects:
+      +tag: "ga_projects"
       staging:
-        +materialized: view
+        +materialized: table
       marts:
         +materialized: table        
