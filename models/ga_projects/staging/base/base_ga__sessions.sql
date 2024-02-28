@@ -20,7 +20,7 @@ select
     clientid as client_id,
     
     parse_date('%Y%m%d',`date`) as visit_date,
-    timestamp_seconds(visitstarttime) as visit_started_at,
+    timestamp_seconds(visitstarttime) as session_started_at,
     
     visitnumber as visit_number,
     totals,

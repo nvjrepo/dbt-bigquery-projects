@@ -4,5 +4,8 @@ sources:
   - name: ga
     database:  bigquery-public-data
     dataset: google_analytics_sample
+    description: >
+      sample dataset contains obfuscated Google Analytics 360 data from the Google Merchandise Store
+      Detail at: https://support.google.com/analytics/answer/7586738?hl=en&ref_topic=3416089&sjid=17520313297308578979-AP#zippy=%2Cin-this-article
     tables:
       - name: ga_sessions_*

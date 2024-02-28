@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: base_ga__sessions
+    description: basic cleaning for sessions
+    columns:
+    - name: unique_id
+      description: Unique identifier for the object.
+      tests:
+        - unique
+        - not_null
